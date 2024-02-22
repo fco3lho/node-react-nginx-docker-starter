@@ -1,0 +1,25 @@
+.App{
+  padding: 50px;
+}
+
+.App form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App div{
+  margin-top: 50px;
+}
+
+.task{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: lightgray;
+}
+
+.task span{
+  padding: 0 10px;
+}
