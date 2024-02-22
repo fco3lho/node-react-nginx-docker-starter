@@ -32,7 +32,7 @@ function App() {
     <div className="App">
       <form onSubmit={handleSubmit}>
         <label>
-          <span>Tarefa:</span>
+          <span>Task:</span>
           <input
             type="text"
             name="descriptionTask"
@@ -41,7 +41,7 @@ function App() {
             onChange={(e) => setDescriptionTask(e.target.value)}
           />
         </label>
-        <button onClick={() => setCondition(true)}>Criar tarefa</button>
+        <button onClick={() => setCondition(true)}>Create task</button>
       </form>
 
       <div>
