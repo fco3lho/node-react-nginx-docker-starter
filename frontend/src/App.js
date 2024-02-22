@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 function App() {
   const [descriptionTask, setDescriptionTask] = useState("");
   const [tasks, setTasks] = useState();
+  const [condition, setCondition] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -14,13 +15,18 @@ function App() {
     })
       .then((response) => console.log(response.data))
       .catch((error) => console.log(error.response.data));
+
+    setDescriptionTask("");
   };
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/get")
-      .then((response) => setTasks(response.data))
+      .then((response) => {
+        setTasks(response.data);
+        setCondition(false);
+      })
       .catch((error) => console.log(error.response.data));
-  }, [setTasks]);
+  }, [condition === true]);
 
   return (
     <div className="App">
@@ -35,7 +41,7 @@ function App() {
             onChange={(e) => setDescriptionTask(e.target.value)}
           />
         </label>
-        <button>Criar tarefa</button>
+        <button onClick={() => setCondition(true)}>Criar tarefa</button>
       </form>
 
       <div>
