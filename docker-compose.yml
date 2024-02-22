@@ -2,6 +2,7 @@ version: "3.8"
 
 services:
   mysql:
+    container_name: starter-mysql
     image: mysql:latest
     restart: unless-stopped
     environment:
@@ -17,6 +18,8 @@ services:
       - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
 
   backend:
+    container_name: starter-backend
+    image: starter-backend
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -29,6 +32,8 @@ services:
         condition: service_healthy
   
   frontend:
+    container_name: starter-frontend
+    image: starter-frontend
     build: 
       context: ./frontend/
       dockerfile: Dockerfile
