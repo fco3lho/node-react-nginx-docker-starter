@@ -1,4 +1,4 @@
-# Node.js + React.js + Nginx + Docker Starter
+# Starter application using Node.js + React.js + Nginx + Docker
 
 It's a initial application for help the peoples what want to build a application biggest for production using containers Docker. **React.js** is on the **/frontend** folder and **Node.js** is on the **/backend** folder.
 
