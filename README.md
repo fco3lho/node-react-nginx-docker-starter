@@ -8,6 +8,10 @@ It's a initial application for help the peoples what want to build a application
   - **Nginx:** v1.24.0
   - **Docker:** v25.0.3
   - **Docker Compose:** v2.24.5
+
+# Step-to-Step deploying in AWS EC2
+
+Click <a href="https://dev.to/fco3lho/starter-application-using-nodejs-reactjs-nginx-docker-being-deployed-to-aws-ec2-step-to-step-1gh">here</a> to be redirected to the article.
   
 # How to use
 
